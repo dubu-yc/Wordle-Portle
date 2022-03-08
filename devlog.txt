@@ -4,7 +4,10 @@ P02 -- Wordle Portle devlog
 2022-03-04
 
 yoonahC, rayatR, josephineL, ericG -- 2022-03-03 09:20
-- Added initial files (devlog, flag, requirements, README.md)
+Added initial files (devlog, flag, requirements, README.md)
 
-yoonahC -- 2022-03-07 19:21pm
-- Revised design document by adding to project description.
+yoonahC -- 2022-03-07 19:21
+Revised design document by adding to project description.
+
+josephineL -- 2022-03-08 09:18
+Added roles, etc. to README.md and added navbar.

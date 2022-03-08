@@ -1,5 +1,5 @@
 # Wordle-Portle
-the best wordles
+*the best wordles*
 
 Yoonah Chang: PM; Frontend (JS)  
 Josephine Lee: Frontend (HTML, CSS)  

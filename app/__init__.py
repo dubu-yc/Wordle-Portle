@@ -7,6 +7,6 @@ debug = True
 
 @app.route("/", methods=["GET","POST"])
 def home():
-	return render_template("Login.html")
+	return render_template("login.html")
 
 app.run()

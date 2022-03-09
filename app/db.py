@@ -2,7 +2,7 @@ def create_tables():
     """Creates the tables in the database to store entries and users"""
     c = db.cursor()
     command = 'CREATE TABLE IF NOT EXISTS scores (username TEXT NOT NULL UNIQUE, wordle_score INTEGER, nerdle_score INTEGER, yordle_score INTEGER)'#use session["user_id"] when adding
-    command = 'CREATE TABLE IF NOT EXISTS users (user_id INTEGER PRIMARY KEY, username TEXT NOT NULL UNIQUE, password TEXT NOT NULL)'
+    command = 'CREATE TABLE IF NOT EXISTS users (username TEXT NOT NULL UNIQUE, password TEXT NOT NULL)'
     c.execute(command)
 
     db.commit() #save changes

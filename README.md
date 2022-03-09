@@ -1,4 +1,4 @@
-# Wordle-Portle
+# Wordle-Portle by Hard Inting Ducks
 *the best wordles*
 
 Yoonah Chang: PM; Frontend (JS)  

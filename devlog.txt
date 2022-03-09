@@ -21,3 +21,6 @@ Added keyboards to wordle and nerdle
 
 yoonahC -- 2022-03-09 09:11
 Added requirements.txt and added launch codes and other README.md general things.
+
+josephineL -- 2022-03-09 09:24
+Worked on website styling and original Wordle page.

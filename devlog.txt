@@ -20,4 +20,4 @@ yoonahC -- 2022-03-08 09:24
 Added keyboards to wordle and nerdle
 
 yoonahC -- 2022-03-09 09:11
-Added requirements.txt
+Added requirements.txt and added launch codes and other README.md general things.

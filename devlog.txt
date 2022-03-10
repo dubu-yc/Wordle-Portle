@@ -29,4 +29,5 @@ ericG, rayatR -- 2022-03-09 09:24
 Register and login close to working with new database sytle
 Finishing other databases tomorrow most likely, though we are close
 
-
+josephineL -- 2022-03-10 09:23
+Added base styling for wordle and nerdle.

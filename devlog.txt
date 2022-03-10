@@ -24,3 +24,9 @@ Added requirements.txt and added launch codes and other README.md general things
 
 josephineL -- 2022-03-09 09:24
 Worked on website styling and original Wordle page.
+
+ericG, rayatR -- 2022-03-09 09:24
+Register and login close to working with new database sytle
+Finishing other databases tomorrow most likely, though we are close
+
+

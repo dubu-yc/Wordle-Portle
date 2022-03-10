@@ -32,5 +32,10 @@ Finishing other databases tomorrow most likely, though we are close
 josephineL -- 2022-03-10 09:23
 Added base styling for wordle and nerdle.
 
-ericG rayatR -- 2022-03-10 9:21
+ericG rayatR -- 2022-03-10 09:21
 Database creation and log in actually works now, begin work on wordle tomorrow hopefully
+
+yoonahC -- 2022-03-10 09:26
+Added styling and forms for wordle, nerdle, and yordle. Made files for other css/js parts.
+
+

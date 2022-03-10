@@ -17,8 +17,8 @@ def home():
 def register():
     if 'username' in request.form.keys() and request.form.get('username') != "":
         #store form information
-         username = request.form.get('username')
-         password = request.form.get('password')
-         confirm = request.form.get('cpassword')	
+        username = request.form.get('username')
+        password = request.form.get('password')
+        confirm = request.form.get('cpassword')	
     return render_template("register.html")
 app.run()

@@ -1,5 +1,23 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
-
-body {
-   background-color: white;
-}
+h1 {
+   text-align: center;
+  }
+  
+#keyboard {
+   margin: 1rem 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+ .second-row {
+   margin: 0.5rem 0;
+ }
+ 
+ .keyboard-button {
+   font-size: 1rem;
+   font-weight: 700;
+   padding: 0.5rem;
+   margin: 0 2px;
+   cursor: pointer;
+   text-transform: uppercase;
+ }

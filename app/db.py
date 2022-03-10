@@ -1,3 +1,7 @@
+import sqlite3
+DB_FILE = "database.db"
+db = sqlite3.connect(DB_FILE)
+c = db.cursor()
 def create_tables():
     """Creates the tables in the database to store entries and users"""
     c = db.cursor()
@@ -12,6 +16,7 @@ def authenticate(username, password):
     result = list(c.execute(f'SELECT user_id from users where username == ? and password == ?', (username, password)))
     if(len(result) == 0): #length 0 means that password/username combination had no match
         return None
+    print("hi")
     return result[0][0] #user_id
 
 def create_user(username, password):

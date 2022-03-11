@@ -8,10 +8,33 @@
 <body>
     <h1> Yordle </h1>
 
-<h2>Guess the Champion!</h2>
-
-<form action="/action_page.php">
-  <label for="fname">You get 6 tries...</label><br>
-  <input type="text" id="fname" name="fname" ><br>
+<form action="/action_page.php"> <!-- This will change to the redirect stuff -->
+  <label for="fname">Guess the Champion!</label><br>
+  <input type="text" id="cname" name="cname" ><br>
   <input type="submit" value="Submit">
 </form>  
+
+<button class="open-button" onclick="openForm()">Open Form</button>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container"> <!-- This will change to the redirect stuff -->
+    <h1>How to play</h1>
+    <p>
+      Welcome to Yordle- a spinoff of the wildly successful Wordle! <br>
+      The goal of the game is to guess the YORDLE in six tries. <br>
+      Each guess must be a valid League of Legends champion name, without punctuation. (E.g. Kai'sa would just be KAISA) <br>
+      Hit the enter button to submit each guess. <br>
+      After each guess, you will receive hints to show how close your guess was to the correct answer. <br>
+    </p>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div> 
+
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>

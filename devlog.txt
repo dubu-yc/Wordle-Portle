@@ -38,4 +38,5 @@ Database creation and log in actually works now, begin work on wordle tomorrow h
 yoonahC -- 2022-03-10 09:26
 Added styling and forms for wordle, nerdle, and yordle. Made files for other css/js parts.
 
-
+josephineL -- 2022-03-11 09:20
+Drafted wordle board initialization in wordle.js.

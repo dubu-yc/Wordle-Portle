@@ -1,29 +1,33 @@
 import sqlite3
 DB_FILE = "database.db"
-db = sqlite3.connect(DB_FILE)
+db = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = db.cursor()
 def create_tables():
-    """Creates the tables in the database to store entries and users"""
     c = db.cursor()
-    command = 'CREATE TABLE IF NOT EXISTS scores (username TEXT NOT NULL UNIQUE, wordle_score INTEGER, nerdle_score INTEGER, yordle_score INTEGER)'#use session["user_id"] when adding
-    command = 'CREATE TABLE IF NOT EXISTS users (username TEXT NOT NULL UNIQUE, password TEXT NOT NULL)'
+    """Creates the tables in the database to store entries and users"""
+    command = 'CREATE TABLE IF NOT EXISTS scores (username TEXT NOT NULL UNIQUE, wordle_score INTEGER, nerdle_score INTEGER, yordle_score INTEGER)'
+    c.execute(command)
+    command = 'CREATE TABLE IF NOT EXISTS users (user_id INTEGER PRIMARY KEY, username TEXT NOT NULL UNIQUE, password TEXT NOT NULL)'
     c.execute(command)
 
     db.commit() #save changes
+create_tables()
 def authenticate(username, password):
-    """Checks if the username and password match any login info in the users table"""
+    create_tables()
     c = db.cursor()
+    """Checks if the username and password match any login info in the users table"""
     result = list(c.execute(f'SELECT user_id from users where username == ? and password == ?', (username, password)))
     if(len(result) == 0): #length 0 means that password/username combination had no match
         return None
-    print("hi")
+    print("it authenticated")
     return result[0][0] #user_id
 
 def create_user(username, password):
-    """Adds a user with a username and password into the users table of the database"""
     c = db.cursor()
+    create_tables()
+    """Adds a user with a username and password into the users table of the database"""
     c.execute(f'INSERT INTO users (username, password) VALUES (?, ?);', (username, password)) 
-    c.execute(f'INSERT INTO scores (username,0,0,0)', (username))
+    c.execute(f'INSERT INTO scores (username, wordle_score,nerdle_score,yordle_score) VALUES (?,?,?,?);', (username,0,0,0))
     db.commit()
 #list(c.execute(f'select user_id, wordle_score, nerde_score, yordle_score from scores where user_id == ? limit ? offset ?', (user_id, limit, offset)))
 #For getting all of a users scores. Mya get rid of limit/offset, if not go from 0-200 or so

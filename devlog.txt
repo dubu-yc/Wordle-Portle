@@ -43,3 +43,7 @@ Drafted wordle board initialization in wordle.js.
 
 yoonahC -- 2022-03-11 09:22
 Added user input to yordle, drafted how to play button that will be copied and loosely edited for other games.
+
+ericG rayatR -- 2022-03-11 09:22
+Ran into weird issues with secretkeys breaking
+General idea for wordle complete, implementation planned

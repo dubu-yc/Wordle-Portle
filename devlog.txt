@@ -53,3 +53,6 @@ Database is fully up and successful i am largely sure. Converted / to /login for
 
 josephineL -- 2022-03-14 09:23
 Added navigation bar and found error with linking JS in the wordle HTML template.
+
+yoonahC -- 2022-03-14 09:26
+Edited descriptions and worked on functionality for games.

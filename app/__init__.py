@@ -49,6 +49,27 @@ def login():
 def open_wordle():
     return render_template("wordle.html")
 
+@app.route("/about", methods=["GET","POST"])
+def open_about():
+    return render_template("about.html")
+
+@app.route("/me", methods=["GET","POST"])
+def open_profile():
+    return render_template("me.html")
+
+@app.route("/nerdle", methods=["GET","POST"])
+def open_nerdle():
+    return render_template("nerdle.html")
+
+@app.route("/yordle", methods=["GET","POST"])
+def open_yordle():
+    return render_template("yordle.html")
+
+@app.route("/home", methods=["GET","POST"])
+def open_home():
+    return render_template("home.html")
+
+
 @app.route("/register", methods=["GET","POST"])
 def register():
     if(request.method == "POST"):

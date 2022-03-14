@@ -1,8 +1,22 @@
-from flask import session
-from flask import request, render_template, Flask, redirect
-import html
+from flask import Flask             #facilitate flask webserving
+from flask import render_template   #facilitate jinja templating
+from flask import request           #facilitate form submission
+from flask import session           #allow for session creation/maintenance
+from flask import redirect
+from flask import url_for
+import urllib
+import json
+import random
+from os import urandom
+# from jokeapi import Jokes
+import asyncio
 import db
 import os
+import sqlite3   #enable control of an sqlite database
+import time
+app = Flask(__name__)    #create Flask object
+app.secret_key = urandom(32) #generates random key
+
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
 db.create_tables()
@@ -30,6 +44,10 @@ def login():
                 return render_template("login.html")
         else:
             return render_template("login.html")
+
+@app.route("/wordle", methods=["GET","POST"])
+def open_wordle():
+    return render_template("wordle.html")
 
 @app.route("/register", methods=["GET","POST"])
 def register():

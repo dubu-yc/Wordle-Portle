@@ -16,7 +16,7 @@ placeholder etc
 
 Clone this repository to your computer with https link:
 ```shell 
-$ git clone git@github.com:EGuo2004/P01.git
+$ git clone https://github.com/dubu-yc/Wordle-Portle.git
 ```
 
 ### Set up a Virtual Environment
@@ -34,14 +34,14 @@ $ git clone git@github.com:EGuo2004/P01.git
 ### Install Libraries Contained in ``` requirements.txt```
 
 ```shell
-(<venv_name>)$ cd <path_to_P01>
+(<venv_name>)$ cd <path_to_Wordle-Portle>
 (<venv_name>)$ pip3 install -r requirements.txt 
 ```
 
 ### Run Program
 
 ```shell
-(<venv_name>)$ cd <path_to_P01>/app
+(<venv_name>)$ cd <path_to_Wordle-Portle>/app
 (<venv_name>)$ python3 __init__.py
 ```
 

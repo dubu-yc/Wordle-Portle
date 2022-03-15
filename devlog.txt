@@ -65,3 +65,6 @@ Just starting a bit of logic for checking wordle. Efficiency may be questionable
 
 ericG -- 2022-03-15 09:00
 Nav bar fix
+
+josephineL -- 2022-03-15 09:23
+Added centering/coloring to HTML game templates.

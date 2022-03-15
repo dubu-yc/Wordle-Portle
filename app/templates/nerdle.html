@@ -42,5 +42,32 @@
         </div>
 
     </div>
+    <br><br>
+    <button class="open-button" onclick="openForm()">How to Play</button>
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container"> <!-- This will change to the redirect stuff -->
+        <h1>How to play</h1>
+          <p>
+            Welcome to Nerdle- an arithmetic-based spinoff of the wildy successful Wordle!<br>
+            The goal of the game is to guess the NERDLE in six tries. <br>
+            Each guess must be a valid eight character equation <br>
+            Hit the enter button to submit each guess. <br>
+            After each guess, you will receive hints to show how close your guess was to the correct answer. <br>
+            Green means that your number or operation was in the correct space. <br>
+            Yellow means that your number or operation is in the word but not in the correct space. <br>
+            Black means that the number or operation is not in the word at all.
+         </p>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+  </div>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
 </body>
 </html>

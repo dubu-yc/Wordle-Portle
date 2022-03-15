@@ -57,7 +57,44 @@
         </div>
 
     </div>
+<<<<<<< HEAD
+    <br><br>
 
+    <button class="open-button" onclick="openForm()">How to Play</button>
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container"> <!-- This will change to the redirect stuff -->
+        <h1>How to play</h1>
+          <p>
+            Welcome to Wordle- the original word-guessing game!<br>
+            The goal of the game is to guess the WORDLE in six tries. <br>
+            Each guess must be a valid five-letter word. <br>
+            Hit the enter button to submit each guess. <br>
+            After each guess, you will receive hints to show how close your guess was to the correct answer. <br>
+            Green means that your letter was in the correct space. <br>
+            Yellow means that your letter is in the word but not in the correct space. <br>
+            Black means that the letter is not in the word at all.
+         </p>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+</div> 
+=======
+
+<<<<<<< HEAD
     <script src="/app/static/js/wordle.js"></script>
+=======
+    <script src="/static/js/wordle.js"></script>
+>>>>>>> 3e0e8f72397bab09b2bbda9b7f8b5ab8e17f88ba
+>>>>>>> 9b677ab3bb79043da3fe83255ac7cb498a6e9fe9
 </body>
 </html>

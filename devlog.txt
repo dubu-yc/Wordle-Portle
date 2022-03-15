@@ -32,7 +32,7 @@ Finishing other databases tomorrow most likely, though we are close
 josephineL -- 2022-03-10 09:23
 Added base styling for wordle and nerdle.
 
-ericG rayatR -- 2022-03-10 09:21
+ericG, rayatR -- 2022-03-10 09:21
 Database creation and log in actually works now, begin work on wordle tomorrow hopefully
 
 yoonahC -- 2022-03-10 09:26
@@ -44,9 +44,21 @@ Drafted wordle board initialization in wordle.js.
 yoonahC -- 2022-03-11 09:22
 Added user input to yordle, drafted how to play button that will be copied and loosely edited for other games.
 
-ericG rayatR -- 2022-03-11 09:22
+ericG, rayatR -- 2022-03-11 09:22
 Ran into weird issues with secretkeys breaking
 General idea for wordle complete, implementation planned
 
 rayatR -- 2022-03-14 00:17
 Database is fully up and successful i am largely sure. Converted / to /login for consistency
+
+josephineL -- 2022-03-14 09:23
+Added navigation bar and found error with linking JS in the wordle HTML template.
+
+yoonahC -- 2022-03-14 09:26
+Edited descriptions and worked on functionality for games.
+
+ericG, rayatR -- 2022-03-14 09:26
+Word api online and vibing, returing jsons
+
+rayatR -- 2022-03-14 23:25
+Just starting a bit of logic for checking wordle. Efficiency may be questionable but should be fine since only 5 letter words

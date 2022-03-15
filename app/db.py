@@ -44,3 +44,34 @@ def create_user(username, password):
                 error_message="Sorry, something went wrong on our end. Please try registering later.")
 """
 
+def error_handling(username, password):
+    """
+    Returns the correct error message when the user is logging in.
+        Parameters:
+            username (str): The username that the user entered
+            password (str): The password that the user entered
+        Returns:
+            "User Not Found": Username does not match any entry in the database
+            "Incorrect Password": Username is found in the database but password doesn't match
+            "": Username and password matches
+    """
+    # avoid thread error
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+
+    # check if username exists in the db
+    command = f"SELECT * FROM users WHERE (username = \"{username}\")"
+    c.execute(command)
+    data = c.fetchall()
+
+    # no user exists
+    if(data == []):
+        return "User Not Found"
+
+    # password is wrong
+    elif(data[0][1] != password):
+        return "Incorrect Password"
+
+    # username and password is correct
+    else:
+        return ""

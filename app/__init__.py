@@ -37,13 +37,25 @@ def login():
             username = request.form.get("username")
             password = request.form.get("password")
             user_id = db.authenticate(username, password) #Checks login against database info -- see authenticate in database.py
-            if(user_id):
+            error = db.error_handling(username, password)
+            if(error == ""):
                 session["user_id"] = user_id #Cookie based authentication (user is identified by his client id)
                 return redirect("/")
             else:
-                return render_template("login.html")
-        else:
+                return render_template('login.html', error_message = error)
             return render_template("login.html")
+
+"""
+    try:
+    error = db.error_handling(username, password)
+    if(error == ""):
+        session["login"] = name_input
+        print("hello")
+        return redirect(url_for('load_home'))
+except Exception as e:
+    error = e
+    return render_template('login.html', error_message = error) # render login page with an error message
+    """
 
 @app.route("/wordle", methods=["GET","POST"])
 def open_wordle():

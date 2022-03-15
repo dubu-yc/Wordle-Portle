@@ -7,12 +7,24 @@
   </head>
 <body>
 
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="me.html">My Profile</a></li>
-        <li><a href="wordle.html">Wordle</a></li>
-      </ul>
+  <form action={{ url_for('open_wordle') }} method="POST">
+    <input class="btn btn-success" type="submit" name="create" value="Wordle">
+  </form>
+  <form action={{ url_for('open_about') }} method="POST">
+    <input class="btn btn-success" type="submit" name="create" value="About">
+  </form>
+  <form action={{ url_for('open_profile') }} method="POST">
+    <input class="btn btn-success" type="submit" name="create" value="Profile">
+  </form>
+  <form action={{ url_for('open_nerdle') }} method="POST">
+    <input class="btn btn-success" type="submit" name="create" value="Nerdle">
+  </form>
+  <form action={{ url_for('open_yordle') }} method="POST">
+    <input class="btn btn-success" type="submit" name="create" value="Yordle">
+  </form>
+  <form action={{ url_for('open_home') }} method="POST">
+    <input class="btn btn-success" type="submit" name="create" value="Home">
+  </form>
     <h1> nerdle </h1>
     
     <div id="game-board">

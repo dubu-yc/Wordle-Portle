@@ -62,3 +62,12 @@ Word api online and vibing, returing jsons
 
 rayatR -- 2022-03-14 23:25
 Just starting a bit of logic for checking wordle. Efficiency may be questionable but should be fine since only 5 letter words
+
+ericG -- 2022-03-15 09:00
+Nav bar fix
+
+josephineL -- 2022-03-15 09:23
+Added centering/coloring to HTML game templates.
+
+yoonahC -- 2022-03-15 09:24
+Fixed file placement, worked on home.html and wordle.html, got rid of unnecessary code.

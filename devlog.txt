@@ -56,3 +56,9 @@ Added navigation bar and found error with linking JS in the wordle HTML template
 
 yoonahC -- 2022-03-14 09:26
 Edited descriptions and worked on functionality for games.
+
+ericG, rayatR -- 2022-03-14 09:26
+Word api online and vibing, returing jsons
+
+rayatR -- 2022-03-14 23:25
+Just starting a bit of logic for checking wordle. Efficiency may be questionable but should be fine since only 5 letter words

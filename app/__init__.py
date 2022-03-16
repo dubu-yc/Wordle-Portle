@@ -41,9 +41,8 @@ def login():
             if(error == ""):
                 session["user_id"] = user_id #Cookie based authentication (user is identified by his client id)
                 return redirect("/")
-            else:
-                return render_template('login.html', error_message = error)
-            return render_template("login.html")
+            return render_template('login.html', error_message = error)
+        return render_template('login.html')
 
 """
     try:
@@ -88,14 +87,17 @@ def register():
         username = request.form.get('username')
         password = request.form.get('password')
         confirm = request.form.get('cpassword')
+        error = ""
         if(str(password) != str(confirm) or password == '' or confirm == ''):
             print("password = " + password)
             print("confirm = "+ confirm)
             print(c)
-            return render_template('register.html')
+            error = "Passwords Do Not Match or Are Blank, Please Try Again"
+            return render_template('register.html',error_message = error)
         if(username == ''):
             print(x)
-            return render_template('register.html')
+            error = "Username Can Not Be Blank"
+            return render_template('register.html',error_message = error)
         elif(str(password) == str(confirm) and password != None):
             print("password" + password)
             session['user_id'] = db.create_user(username, password)

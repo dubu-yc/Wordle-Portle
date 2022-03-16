@@ -77,3 +77,6 @@ wordle check works assuming no double letters. multi letter counter also works, 
 
 josephineL -- 2022-03-16 09:16
 Continued to add CSS styling to HTML templates.
+
+yoonahC -- 2022-03-16 09:19
+Started making grids for wordle using flexbox.

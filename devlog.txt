@@ -74,3 +74,6 @@ Fixed file placement, worked on home.html and wordle.html, got rid of unnecessar
 
 rayatR -- 2022-03-15 23:44
 wordle check works assuming no double letters. multi letter counter also works, but wordle check for it has yet to be implemented
+
+josephineL -- 2022-03-16 09:16
+Continued to add CSS styling to HTML templates.

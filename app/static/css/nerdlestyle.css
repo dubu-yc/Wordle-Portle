@@ -28,3 +28,19 @@ h1 {
  body{
   background-color: lightgoldenrodyellow;
 }
+
+.flex-grid-fifths {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  /*justify-content: space-between;*/
+  /*gap: 20px 20px;*/
+  align-content: center;
+}
+.flex-grid-fifths .col {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 25px;
+  width: 1%;
+  align-content: center;
+}

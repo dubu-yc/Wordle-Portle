@@ -32,9 +32,10 @@ h1 {
 .flex-grid-fifths {
   display: flex;
   width: 300px;
+  height: 40px;
   align-items: center;
   /*justify-content: space-between;*/
-  /*gap: 20px 20px;*/
+  gap: 20px 20px;
   align-content: center;
 }
 .flex-grid-fifths .col {

@@ -29,13 +29,16 @@ h1 {
 
 .flex-grid-fifths {
   display: flex;
-  justify-content: space-between;
-  gap: 50px 50px;
+  width: 300px;
+  align-items: center;
+  /*justify-content: space-between;*/
+  /*gap: 20px 20px;*/
   align-content: center;
 }
 .flex-grid-fifths .col {
   background-color: #f1f1f1;
   margin: 10px;
-  padding: 35px;
+  padding: 25px;
   width: 1%;
+  align-content: center;
 }

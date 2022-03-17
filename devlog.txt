@@ -83,3 +83,6 @@ Started making grids for wordle using flexbox.
 
 rayatR -- 2022-03-17 00:00
 Hopefully prevented same username conflicts, successfully finished wordle logic.
+
+josephineL -- 2022-03-17 09:24
+Added CSS to Wordle flex grid; started nerdle flex grid.

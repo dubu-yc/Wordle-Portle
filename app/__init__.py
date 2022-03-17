@@ -14,9 +14,7 @@ import db
 import os
 import sqlite3   #enable control of an sqlite database
 import time
-app = Flask(__name__)    #create Flask object
-app.secret_key = urandom(32) #generates random key
-
+from sqlite3.dbapi2 import IntegrityError
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
 db.create_tables()
@@ -100,8 +98,12 @@ def register():
             return render_template('register.html',error_message = error)
         elif(str(password) == str(confirm) and password != None):
             print("password" + password)
-            session['user_id'] = db.create_user(username, password)
-            return redirect("/")
+            try:
+                session['user_id'] = db.create_user(username, password)
+                return redirect("/")
+            except IntegrityError:
+                error = "that username is already taken"
+                return render_template('register.html', error_message = error)
         else:
             print("register")
             return render_template('register.html')

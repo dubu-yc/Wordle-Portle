@@ -14,6 +14,7 @@ import db
 import os
 import sqlite3   #enable control of an sqlite database
 import time
+from flask import jsonify
 from sqlite3.dbapi2 import IntegrityError
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
@@ -78,6 +79,13 @@ def open_yordle():
 def open_home():
     return render_template("home.html")
 
+@app.route('/wordget')
+def get_word():
+    file = open('Words.txt')
+    content = file.readlines()
+    randominteger = random.randint(0,2300)
+    words = content[randominteger]
+    return jsonify(words)
 
 @app.route("/register", methods=["GET","POST"])
 def register():

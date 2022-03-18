@@ -1,5 +1,15 @@
 const num_guesses = 6;
 
+let word;
+let py_data = fetch('/wordget')
+.then(function(response){
+  return response.json();
+})
+.then(data => {
+  console.log(data);
+  word = data;
+})
+
 function initBoard() {
     let board = document.getElementById("wordle-board");
     for (let i = 0; i < num_guesses; i++) {
@@ -16,7 +26,6 @@ function initBoard() {
 
 initBoard()
 
-let word = "besed";
 let word_chars = word.split('');
 console.log(word_chars);
 let guess = "esmed";

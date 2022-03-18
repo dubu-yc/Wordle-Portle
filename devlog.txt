@@ -93,3 +93,6 @@ Added CSS to Wordle flex grid; started nerdle flex grid.
 
 ericG -- 2022-03-17 09:24
 CSV file for yordle
+
+josephineL -- 2022-03-18 09:19
+Improved nerdle CSS flex grid.

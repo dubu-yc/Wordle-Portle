@@ -81,8 +81,15 @@ Continued to add CSS styling to HTML templates.
 yoonahC -- 2022-03-16 09:19
 Started making grids for wordle using flexbox.
 
+ericG, rayatR -- 2022-03-16 09:19
+Worked on wordle checking
+Added a txt file of the words because it is more effective
+
 rayatR -- 2022-03-17 00:00
 Hopefully prevented same username conflicts, successfully finished wordle logic.
 
 josephineL -- 2022-03-17 09:24
 Added CSS to Wordle flex grid; started nerdle flex grid.
+
+ericG -- 2022-03-17 09:24
+CSV file for yordle

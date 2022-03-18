@@ -29,17 +29,18 @@ h1 {
   background-color: lightgoldenrodyellow;
 }
 
-.flex-grid-fifths {
+.flex-grid-eighths {
   display: flex;
   width: 300px;
   height: 40px;
   align-items: center;
-  /*justify-content: space-between;*/
+  justify-content: space-between;
   gap: 20px 20px;
   align-content: center;
 }
-.flex-grid-fifths .col {
+.flex-grid-eighths .col {
   background-color: #f1f1f1;
+  align-items: center;
   margin: 10px;
   padding: 25px;
   width: 1%;

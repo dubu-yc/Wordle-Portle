@@ -14,6 +14,7 @@ import db
 import os
 import sqlite3   #enable control of an sqlite database
 import time
+import csv
 from flask import jsonify
 from sqlite3.dbapi2 import IntegrityError
 app = Flask(__name__)
@@ -87,6 +88,13 @@ def get_word():
     words = content[randominteger]
     return jsonify(words)
 
+@app.route('/champget')
+def get_champ():
+    data = list(csv.reader(open("Champs.csv")))
+    randominteger = random.randint(0,158)
+    champ_chosen = data[randominteger][0]
+    return jsonify(champ_chosen)
+    
 @app.route("/register", methods=["GET","POST"])
 def register():
     if(request.method == "POST"):

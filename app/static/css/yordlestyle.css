@@ -28,7 +28,3 @@ ul {
   li a:hover {
     background-color: black;
   }
-  
-  .active {
-    background-color: #04AA6D;
-  }

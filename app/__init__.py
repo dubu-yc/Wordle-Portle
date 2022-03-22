@@ -91,9 +91,7 @@ def get_word():
 @app.route('/champget')
 def get_champ():
     data = list(csv.reader(open("Champs.csv")))
-    randominteger = random.randint(0,158)
-    champ_chosen = data[randominteger][0]
-    return jsonify(champ_chosen)
+    return jsonify(data)
     
 @app.route("/register", methods=["GET","POST"])
 def register():

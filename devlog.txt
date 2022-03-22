@@ -111,3 +111,6 @@ Added and edited nav bar
 
 josephineL -- 2022-03-22 09:19
 Edited design document to show changes in APIs, types of Wordle games, etc.
+
+yoonahC -- 2022-03-22 09:26
+Changed html templates functionality for logout. Worked on nerdle grids.

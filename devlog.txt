@@ -97,10 +97,6 @@ CSV file for yordle
 josephineL -- 2022-03-18 09:19
 Improved nerdle CSS flex grid.
 
-<<<<<<< Updated upstream
-yoonahC -- 2022-03-21 09:27
-Added and edited nav bar
-=======
 ericG, rayatR -- 2022-03-18 09:21
 Wordle almost complete, just need user input(probably)
 
@@ -109,4 +105,6 @@ Yordle Champion Generation Works Gooder
 
 rayatR -- 2022-03-21 09:24
 Nerdle JS works now
->>>>>>> Stashed changes
+
+yoonahC -- 2022-03-21 09:27
+Added and edited nav bar

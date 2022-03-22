@@ -108,3 +108,6 @@ Nerdle JS works now
 
 yoonahC -- 2022-03-21 09:27
 Added and edited nav bar
+
+josephineL -- 2022-03-22 09:19
+Edited design document to show changes in APIs, types of Wordle games, etc.

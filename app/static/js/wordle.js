@@ -8,16 +8,26 @@ let py_data = fetch('/wordget')
 .then(data => {
   console.log(data);
   word = data;
-})
-
-let word_chars = word.split('');
-console.log(word_chars);
-let guess = "esmed";
+  let word_chars = word.split('');
+  console.log(word_chars);
+document.addEventListener('keydown',letter);
+function letter(e) {
+  log.innerHTML += ` ${e.code}`;
+  console.log('hello')
+}
+/*
+There is an array of their guess. When they press a key, it updates the array and the display (each box has a different ID)
+If there are 5 letters and they press enter, the js array checks if it is a word first by adding each character to a string
+If it isn't, it displays in some div block "not a word"
+If it is, num_guesses is decremented, and the function to check the word is called
+*/
+let guess = 'esmed'
 let guess_chars = guess.split('');
 console.log(guess_chars);
 let dup = ['',''];
 let dup_count = [0,0];
 let result = ['','','','',''];
+//Make everything below this into one function called check_word
 /*all of this is to store doubles and triples */
 for (var i = 0; i < word_chars.length-1; i++) {
   for (var j = i+1; j < word_chars.length; j++) {
@@ -80,3 +90,5 @@ for (var i = 0; i < dup.length; i++) {
     }
   }
 }
+})
+

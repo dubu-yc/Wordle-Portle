@@ -1,4 +1,5 @@
 let c = 3;
+let num_guesses = 6;
 var equation = ['','','','','','','',''];
 var guess = ['','','','','','','',''];
 var result = ['','','','','','','',''];
@@ -20,10 +21,10 @@ function generate() {
     num1 = Math.floor(Math.random() * 10);
     let op = Math.floor(Math.random() * 2);
     if(op == 0){
-      operation = '+';
+      operation = 'p';
     }
     if(op == 1){
-      operation = '*';
+      operation = 'x';
     }
     digits = digits + 1;
   }
@@ -61,13 +62,13 @@ function generate() {
     digits = digits + 3;
   }
 
-  if(operation == '+'){
+  if(operation == 'p'){
     res = num1 + num2;
   }
   if(operation == '-'){
     res = num1 - num2;
   }
-  if(operation == '*'){
+  if(operation == 'x'){
     res = num1 * num2;
   }
   if(operation == '/'){
@@ -105,31 +106,355 @@ function letter(e) {
     if(row == 'a'){
       let result = check_eq(a1.innerHTML + a2.innerHTML + a3.innerHTML + a4.innerHTML + a5.innerHTML + a6.innerHTML + a7.innerHTML + a8.innerHTML);
       console.log(result);
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            a1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            a2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            a3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            a4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            a5.style = "background-color: yellow;"
+          }
+          else if(i==5){
+            a6.style = "background-color: yellow;"
+          }
+          else if(i==6){
+            a7.style = "background-color: yellow;"
+          }
+          else if(i==7){
+            a8.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            a1.style = "background-color: green;"
+          }
+          else if(i==1){
+            a2.style = "background-color: green;"
+          }
+          else if(i==2){
+            a3.style = "background-color: green;"
+          }
+          else if(i==3){
+            a4.style = "background-color: green;"
+          }
+          else if(i==4){
+            a5.style = "background-color: green;"
+          }
+          else if(i==5){
+            a6.style = "background-color: green;"
+          }
+          else if(i==6){
+            a7.style = "background-color: green;"
+          }
+          else if(i==7){
+            a8.style = "background-color: green;"
+          }
+        }
+      }
       row = 'b';
     }
     else if(row == 'b'){
       let result = check_eq(b1.innerHTML + b2.innerHTML + b3.innerHTML + b4.innerHTML + b5.innerHTML + b6.innerHTML + b7.innerHTML + b8.innerHTML);
       console.log(result);
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            b1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            b2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            b3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            b4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            b5.style = "background-color: yellow;"
+          }
+          else if(i==5){
+            b6.style = "background-color: yellow;"
+          }
+          else if(i==6){
+            b7.style = "background-color: yellow;"
+          }
+          else if(i==7){
+            b8.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            b1.style = "background-color: green;"
+          }
+          else if(i==1){
+            b2.style = "background-color: green;"
+          }
+          else if(i==2){
+            b3.style = "background-color: green;"
+          }
+          else if(i==3){
+            b4.style = "background-color: green;"
+          }
+          else if(i==4){
+            b5.style = "background-color: green;"
+          }
+          else if(i==5){
+            b6.style = "background-color: green;"
+          }
+          else if(i==6){
+            b7.style = "background-color: green;"
+          }
+          else if(i==7){
+            b8.style = "background-color: green;"
+          }
+        }
+      }
       row = 'c';
     }
     else if(row == 'c'){
       let result = check_eq(c1.innerHTML + c2.innerHTML + c3.innerHTML + c4.innerHTML + c5.innerHTML + c6.innerHTML + c7.innerHTML + c8.innerHTML);
       console.log(result);
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            c1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            c2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            c3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            c4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            c5.style = "background-color: yellow;"
+          }
+          else if(i==5){
+            c6.style = "background-color: yellow;"
+          }
+          else if(i==6){
+            c7.style = "background-color: yellow;"
+          }
+          else if(i==7){
+            c8.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            c1.style = "background-color: green;"
+          }
+          else if(i==1){
+            c2.style = "background-color: green;"
+          }
+          else if(i==2){
+            c3.style = "background-color: green;"
+          }
+          else if(i==3){
+            c4.style = "background-color: green;"
+          }
+          else if(i==4){
+            c5.style = "background-color: green;"
+          }
+          else if(i==5){
+            c6.style = "background-color: green;"
+          }
+          else if(i==6){
+            c7.style = "background-color: green;"
+          }
+          else if(i==7){
+            c8.style = "background-color: green;"
+          }
+        }
+      }
       row = 'd';
     }
     else if(row == 'd'){
       let result = check_eq(d1.innerHTML + d2.innerHTML + d3.innerHTML + d4.innerHTML + d5.innerHTML + d6.innerHTML + d7.innerHTML + d8.innerHTML);
       console.log(result);
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            d1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            d2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            d3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            d4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            d5.style = "background-color: yellow;"
+          }
+          else if(i==5){
+            d6.style = "background-color: yellow;"
+          }
+          else if(i==6){
+            d7.style = "background-color: yellow;"
+          }
+          else if(i==7){
+            d8.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            d1.style = "background-color: green;"
+          }
+          else if(i==1){
+            d2.style = "background-color: green;"
+          }
+          else if(i==2){
+            d3.style = "background-color: green;"
+          }
+          else if(i==3){
+            d4.style = "background-color: green;"
+          }
+          else if(i==4){
+            d5.style = "background-color: green;"
+          }
+          else if(i==5){
+            d6.style = "background-color: green;"
+          }
+          else if(i==6){
+            d7.style = "background-color: green;"
+          }
+          else if(i==7){
+            d8.style = "background-color: green;"
+          }
+        }
+      }
       row = 'e';
     }
     else if(row == 'e'){
       let result = check_eq(e1.innerHTML + e2.innerHTML + e3.innerHTML + e4.innerHTML + e5.innerHTML + e6.innerHTML + e7.innerHTML + e8.innerHTML);
       console.log(result);
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            e1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            e2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            e3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            e4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            e5.style = "background-color: yellow;"
+          }
+          else if(i==5){
+            e6.style = "background-color: yellow;"
+          }
+          else if(i==6){
+            e7.style = "background-color: yellow;"
+          }
+          else if(i==7){
+            e8.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            e1.style = "background-color: green;"
+          }
+          else if(i==1){
+            e2.style = "background-color: green;"
+          }
+          else if(i==2){
+            e3.style = "background-color: green;"
+          }
+          else if(i==3){
+            e4.style = "background-color: green;"
+          }
+          else if(i==4){
+            e5.style = "background-color: green;"
+          }
+          else if(i==5){
+            e6.style = "background-color: green;"
+          }
+          else if(i==6){
+            e7.style = "background-color: green;"
+          }
+          else if(i==7){
+            e8.style = "background-color: green;"
+          }
+        }
+      }
       row = 'f';
     }
     else if(row == 'f'){
       let result = check_eq(f1.innerHTML + f2.innerHTML + f3.innerHTML + f4.innerHTML + f5.innerHTML + f6.innerHTML + f7.innerHTML + f8.innerHTML);
       console.log(result);
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            f1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            f2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            f3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            f4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            f5.style = "background-color: yellow;"
+          }
+          else if(i==5){
+            f6.style = "background-color: yellow;"
+          }
+          else if(i==6){
+            f7.style = "background-color: yellow;"
+          }
+          else if(i==7){
+            f8.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            f1.style = "background-color: green;"
+          }
+          else if(i==1){
+            f2.style = "background-color: green;"
+          }
+          else if(i==2){
+            f3.style = "background-color: green;"
+          }
+          else if(i==3){
+            f4.style = "background-color: green;"
+          }
+          else if(i==4){
+            f5.style = "background-color: green;"
+          }
+          else if(i==5){
+            f6.style = "background-color: green;"
+          }
+          else if(i==6){
+            f7.style = "background-color: green;"
+          }
+          else if(i==7){
+            f8.style = "background-color: green;"
+          }
+        }
+      }
     }
     pos = 1;
   }
@@ -443,6 +768,7 @@ function check_eq(gues) {
       }
     }
   }
+  return result;
 }
 console.log(dup);
 console.log(dup_guess);

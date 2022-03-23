@@ -114,3 +114,9 @@ Edited design document to show changes in APIs, types of Wordle games, etc.
 
 yoonahC -- 2022-03-22 09:26
 Changed html templates functionality for logout. Worked on nerdle grids.
+
+ericG -- 2022-03-22 09:27
+Yordle input works perfectly, good integration into JS, Checking Guess is WIP
+
+ericG -- 2022-03-23 16:12
+Yordle almost completely functional, currently only console.log shows stuff however

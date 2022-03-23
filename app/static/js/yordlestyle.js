@@ -1,6 +1,6 @@
 let FullList;
 let Guess;
-
+let Champ;
 let py_data = fetch('/champget')
 .then(function(response){
   return response.json();
@@ -10,9 +10,9 @@ let py_data = fetch('/champget')
   FullList = data;
   getChamp();
   document.addEventListener('keydown',checkChamp);
-})
 
-let Champ;
+
+
 function getChamp() {
   let Num = Math.floor(Math.random() * 158);
   Champ = FullList[Num][0];
@@ -21,8 +21,8 @@ function getChamp() {
 
 
 function checkChamp(e) {
-  if('$(e.code)' == "Enter"){
-    console.log(e);
+  if(e.key == "Enter"){
+    console.log(document.getElementById("cname").value);
   }
 }
-
+})

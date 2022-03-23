@@ -16,12 +16,10 @@
   </ul>
   
     <h1> Yordle </h1>
-
-<form> <!-- This will change to the redirect stuff -->
+<div>
   <label for="fname">Guess the Champion!</label><br>
   <input type="text" id="cname" name="cname" ><br>
-</form>  
-
+</div>
 <button class="open-button" onclick="openForm()">How to Play</button>
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container"> <!-- This will change to the redirect stuff -->
@@ -46,7 +44,6 @@
     document.getElementById("myForm").style.display = "none";
   }
   </script>
-  <script src="/app/static/js/yordlestyle.js"></script>
   <script src="/static/js/yordlestyle.js"></script>
 </body>
 </html>

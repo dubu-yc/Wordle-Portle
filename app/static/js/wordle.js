@@ -25,21 +25,40 @@ function letter(e) {
   if(inp == 'Backspace'){
     pos = pos - 1;
   }
+  /*
+  else if(pos != 9 && (inp != 'a')){ //make it so they can only do letters
+    
+  }
+  */
   else if(inp == 'Enter' && pos == 6){
     if(row == 'a'){
+      let result = check_word(a1.innerHTML + a2.innerHTML + a3.innerHTML + a4.innerHTML + a5.innerHTML);
+      console.log(result);
       row = 'b';
     }
     else if(row == 'b'){
+      let result = check_word(b1.innerHTML + b2.innerHTML + b3.innerHTML + b4.innerHTML + b5.innerHTML);
+      console.log(result);
       row = 'c';
     }
     else if(row == 'c'){
+      let result = check_word(c1.innerHTML + c2.innerHTML + c3.innerHTML + c4.innerHTML + c5.innerHTML);
+      console.log(result);
       row = 'd';
     }
     else if(row == 'd'){
+      let result = check_word(d1.innerHTML + d2.innerHTML + d3.innerHTML + d4.innerHTML + d5.innerHTML);
+      console.log(result);
       row = 'e';
     }
     else if(row == 'e'){
+      let result = check_word(e1.innerHTML + e2.innerHTML + e3.innerHTML + e4.innerHTML + e5.innerHTML);
+      console.log(result);
       row = 'f';
+    }
+    else if(row == 'f'){
+      let result = check_word(f1.innerHTML + f2.innerHTML + f3.innerHTML + f4.innerHTML + f5.innerHTML);
+      console.log(result);
     }
     pos = 1;
   }
@@ -174,8 +193,6 @@ If there are 5 letters and they press enter, the js array checks if it is a word
 If it isn't, it displays in some div block "not a word"
 If it is, num_guesses is decremented, and the function to check the word is called
 */
-let result = check_word('esemd');
-console.log(result);
 function check_word(guess) {
   guess_chars = guess.split('');
   console.log(guess_chars);

@@ -23,7 +23,9 @@ function letter(e) {
   curr = row + pos;
   console.log(inp);
   if(inp == 'Backspace'){
-    pos = pos - 1;
+    if(pos > 0){
+      pos = pos - 1;
+    }
   }
   /*
   else if(pos != 9 && (inp != 'a')){ //make it so they can only do letters
@@ -34,31 +36,253 @@ function letter(e) {
     if(row == 'a'){
       let result = check_word(a1.innerHTML + a2.innerHTML + a3.innerHTML + a4.innerHTML + a5.innerHTML);
       console.log(result);
+      num_guesses = num_guesses - 1;
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            a1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            a2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            a3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            a4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            a5.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            a1.style = "background-color: green;"
+          }
+          else if(i==1){
+            a2.style = "background-color: green;"
+          }
+          else if(i==2){
+            a3.style = "background-color: green;"
+          }
+          else if(i==3){
+            a4.style = "background-color: green;"
+          }
+          else if(i==4){
+            a5.style = "background-color: green;"
+          }
+        }
+      }
       row = 'b';
     }
     else if(row == 'b'){
       let result = check_word(b1.innerHTML + b2.innerHTML + b3.innerHTML + b4.innerHTML + b5.innerHTML);
       console.log(result);
+      num_guesses = num_guesses - 1;
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            b1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            b2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            b3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            b4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            b5.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            b1.style = "background-color: green;"
+          }
+          else if(i==1){
+            b2.style = "background-color: green;"
+          }
+          else if(i==2){
+            b3.style = "background-color: green;"
+          }
+          else if(i==3){
+            b4.style = "background-color: green;"
+          }
+          else if(i==4){
+            b5.style = "background-color: green;"
+          }
+        }
+      }
       row = 'c';
     }
     else if(row == 'c'){
       let result = check_word(c1.innerHTML + c2.innerHTML + c3.innerHTML + c4.innerHTML + c5.innerHTML);
       console.log(result);
+      num_guesses = num_guesses - 1;
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            c1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            c2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            c3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            c4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            c5.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            c1.style = "background-color: green;"
+          }
+          else if(i==1){
+            c2.style = "background-color: green;"
+          }
+          else if(i==2){
+            c3.style = "background-color: green;"
+          }
+          else if(i==3){
+            c4.style = "background-color: green;"
+          }
+          else if(i==4){
+            c5.style = "background-color: green;"
+          }
+        }
+      }
       row = 'd';
     }
     else if(row == 'd'){
       let result = check_word(d1.innerHTML + d2.innerHTML + d3.innerHTML + d4.innerHTML + d5.innerHTML);
       console.log(result);
+      num_guesses = num_guesses - 1;
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            d1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            d2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            d3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            d4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            d5.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            d1.style = "background-color: green;"
+          }
+          else if(i==1){
+            d2.style = "background-color: green;"
+          }
+          else if(i==2){
+            d3.style = "background-color: green;"
+          }
+          else if(i==3){
+            d4.style = "background-color: green;"
+          }
+          else if(i==4){
+            d5.style = "background-color: green;"
+          }
+        }
+      }
       row = 'e';
     }
     else if(row == 'e'){
       let result = check_word(e1.innerHTML + e2.innerHTML + e3.innerHTML + e4.innerHTML + e5.innerHTML);
       console.log(result);
+      num_guesses = num_guesses - 1;
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            e1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            e2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            e3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            e4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            e5.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            e1.style = "background-color: green;"
+          }
+          else if(i==1){
+            e2.style = "background-color: green;"
+          }
+          else if(i==2){
+            e3.style = "background-color: green;"
+          }
+          else if(i==3){
+            e4.style = "background-color: green;"
+          }
+          else if(i==4){
+            e5.style = "background-color: green;"
+          }
+        }
+      }
       row = 'f';
     }
     else if(row == 'f'){
       let result = check_word(f1.innerHTML + f2.innerHTML + f3.innerHTML + f4.innerHTML + f5.innerHTML);
       console.log(result);
+      num_guesses = num_guesses - 1;
+      for (var i = 0; i < result.length; i++) {
+        if(result[i] == 'yellow'){
+          if(i == 0){
+            f1.style = "background-color: yellow;"
+          }
+          else if(i==1){
+            f2.style = "background-color: yellow;"
+          }
+          else if(i==2){
+            f3.style = "background-color: yellow;"
+          }
+          else if(i==3){
+            f4.style = "background-color: yellow;"
+          }
+          else if(i==4){
+            f5.style = "background-color: yellow;"
+          }
+        }
+        else if(result[i] == 'green'){
+          if(i == 0){
+            f1.style = "background-color: green;"
+          }
+          else if(i==1){
+            f2.style = "background-color: green;"
+          }
+          else if(i==2){
+            f3.style = "background-color: green;"
+          }
+          else if(i==3){
+            f4.style = "background-color: green;"
+          }
+          else if(i==4){
+            f5.style = "background-color: green;"
+          }
+        }
+      }
     }
     pos = 1;
   }

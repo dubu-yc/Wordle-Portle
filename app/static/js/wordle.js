@@ -155,6 +155,7 @@ function letter(e) {
           $.post( "/wordle", {
             js_data : 'correct'
           });
+        }
         for (var i = 0; i < result.length; i++) {
           if(result[i] == 'yellow'){
             if(i == 0){
@@ -191,7 +192,6 @@ function letter(e) {
             }
           }
         }
-        }
         row = 'b';
     }
     }
@@ -209,6 +209,13 @@ function letter(e) {
       }
       else{
       num_guesses = num_guesses - 1;
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/wordle", {
+            js_data : 'correct'
+          });
+        }
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -261,6 +268,13 @@ function letter(e) {
         pos = 1;
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/wordle", {
+            js_data : 'correct'
+          });
+        }
       num_guesses = num_guesses - 1;
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
@@ -314,6 +328,13 @@ function letter(e) {
         pos = 1;
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/wordle", {
+            js_data : 'correct'
+          });
+        }
       num_guesses = num_guesses - 1;
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
@@ -367,6 +388,13 @@ function letter(e) {
         pos = 1;
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/wordle", {
+            js_data : 'correct'
+          });
+        }
       num_guesses = num_guesses - 1;
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
@@ -420,6 +448,20 @@ function letter(e) {
         pos = 1;
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/wordle", {
+            js_data : 'correct'
+          });
+        }
+        else{
+          console.log(result)
+          console.log('incorrect');
+          $.post( "/wordle", {
+            js_data : 'incorrect'
+          });
+        }
         num_guesses = num_guesses - 1;
         for (var i = 0; i < result.length; i++) {
           if(result[i] == 'yellow'){

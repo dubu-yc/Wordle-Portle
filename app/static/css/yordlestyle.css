@@ -18,6 +18,7 @@ ul {
   }
   
   li a {
+    margin-right: 150px;
     display: block;
     color:white;
     text-align: center;

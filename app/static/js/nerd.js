@@ -249,6 +249,7 @@ function letter(e) {
     if(row == 'a'){
       let result = check_eq(a1.innerHTML + a2.innerHTML + a3.innerHTML + a4.innerHTML + a5.innerHTML + a6.innerHTML + a7.innerHTML + a8.innerHTML);
       console.log(result);
+
       if(result == "n"){
         console.log("not an equation")
         a1.innerHTML = 'a';
@@ -261,6 +262,13 @@ function letter(e) {
         a8.innerHTML = 'h';
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green" && result[5] == "green" && result[6] == "green" && result[7] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/nerdle", {
+            js_data : 'correct'
+          });
+        }
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -333,6 +341,13 @@ function letter(e) {
         b8.innerHTML = 'h';
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green" && result[5] == "green" && result[6] == "green" && result[7] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/nerdle", {
+            js_data : 'correct'
+          });
+        }
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -405,6 +420,13 @@ function letter(e) {
         c8.innerHTML = 'h';
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green" && result[5] == "green" && result[6] == "green" && result[7] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/nerdle", {
+            js_data : 'correct'
+          });
+        }
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -477,6 +499,13 @@ function letter(e) {
         d8.innerHTML = 'h';
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green" && result[5] == "green" && result[6] == "green" && result[7] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/nerdle", {
+            js_data : 'correct'
+          });
+        }
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -549,6 +578,13 @@ function letter(e) {
         e8.innerHTML = 'h';
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green" && result[5] == "green" && result[6] == "green" && result[7] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/nerdle", {
+            js_data : 'correct'
+          });
+        }
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -621,6 +657,20 @@ function letter(e) {
         f8.innerHTML = 'h';
       }
       else{
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green" && result[5] == "green" && result[6] == "green" && result[7] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/nerdle", {
+            js_data : 'correct'
+          });
+        }
+        else{
+          console.log(result)
+          console.log('incorrect');
+          $.post( "/nerdle", {
+            js_data : 'incorrect'
+          });
+        }
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){

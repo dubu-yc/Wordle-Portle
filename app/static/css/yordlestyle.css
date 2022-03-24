@@ -6,6 +6,7 @@ body{
 }
 
 ul {
+    margin-left: 150px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -18,7 +19,6 @@ ul {
   }
   
   li a {
-    margin-left: 150px;
     display: block;
     color:white;
     text-align: center;

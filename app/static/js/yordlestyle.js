@@ -1,5 +1,5 @@
 let FullList;
-let Guesses = 8;
+let Guesses = 6;
 let Champ;
 let NumOfChamp;
 let NumOfGuessChamp;

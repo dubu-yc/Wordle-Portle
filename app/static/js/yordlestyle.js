@@ -22,7 +22,7 @@ function getChamp() {
 function checkChamp(e) {
   if(e.key == "Enter" && validChamp()){
     Guesses--;
-    if(Guesses <= 0) {
+    if(Guesses < 0) {
       g1.innerHTML = "Too bad, so sad, you inted";
       g2.innerHTML = "The correct champion was: " + FullList[NumOfChamp][0];
       g3.innerHTML = "";

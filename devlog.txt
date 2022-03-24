@@ -123,3 +123,6 @@ Yordle almost completely functional, currently only console.log shows stuff howe
 
 yoonahC -- 2022-03-23 20:01
 Added functionality to about page, edited rest of templates.
+
+josephineL -- 2022-03-23 21:24
+Edited home page to include flag, etc.

@@ -19,8 +19,6 @@ function getChamp() {
   NumOfChamp = Math.floor(Math.random() * 158);
   Champ = FullList[NumOfChamp][0];
 }
-
-
 function checkChamp(e) {
   if(e.key == "Enter" && validChamp()){
     Guesses--;
@@ -31,6 +29,10 @@ function checkChamp(e) {
       g4.innerHTML = "";
       g5.innerHTML = "";
       g6.innerHTML = "";
+      console.log('incorrect');
+        $.post( "/yordle", {
+          js_data : 'incorrect'
+        });
     } else {
       let info = '';
       g0.innerHTML = '';
@@ -38,6 +40,10 @@ function checkChamp(e) {
       //Name Check
       if(FullList[NumOfGuessChamp][0] == FullList[NumOfChamp][0]) {
         info += FullList[NumOfGuessChamp][0] + ": Correct Champion, ";
+        console.log('correct');
+        $.post( "/yordle", {
+          js_data : 'correct'
+        });
       } else {
         info += ": Wrong Champion, ";
       }

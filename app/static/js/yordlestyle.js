@@ -39,7 +39,7 @@ function checkChamp(e) {
       if(FullList[NumOfGuessChamp][0] == FullList[NumOfChamp][0]) {
         info += FullList[NumOfGuessChamp][0] + ": Correct Champion, ";
       } else {
-        info += "Wrong Champion, ";
+        info += ": Wrong Champion, ";
       }
       //Class
       if(FullList[NumOfGuessChamp][1] == FullList[NumOfChamp][1]) {
@@ -68,22 +68,22 @@ function checkChamp(e) {
         info += "Wrong Role";
       }
       if(p == 0){
-        g1.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
+        g1.innerHTML = FullList[NumOfGuessChamp][0] + info;
       }
       else if(p==1){
-        g2.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
+        g2.innerHTML = FullList[NumOfGuessChamp][0]+ info;
       }
       else if(p==2){
-        g3.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
+        g3.innerHTML = FullList[NumOfGuessChamp][0] + info;
       }
       else if(p==3){
-        g4.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
+        g4.innerHTML = FullList[NumOfGuessChamp][0]+ info;
       }
       else if(p==4){
-        g5.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
+        g5.innerHTML = FullList[NumOfGuessChamp][0]+ info;
       }
       else if(p==5){
-        g6.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
+        g6.innerHTML = FullList[NumOfGuessChamp][0]+ info;
       }
       console.log(info);
       p+=1;

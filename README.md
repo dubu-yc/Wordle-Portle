@@ -10,7 +10,8 @@ Rayat Roy: Backend (Python file; database handling)
    The Wordle-Portle was created to have multiple versions of the popular puzzle game in one place. From the classic Wordle to the math loving Nerdle, there is a puzzle for people of all ages.
 
 ## APIs Used
-placeholder etc
+WordsAPI to verify if guesses are valid words: https://github.com/stuy-softdev/notes-and-code/blob/main/api_kb/411_on_WordsAPI.md
+
 ## Launch Codes
 ### Clone Repository
 

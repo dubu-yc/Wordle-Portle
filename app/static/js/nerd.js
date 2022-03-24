@@ -103,9 +103,22 @@ function letter(e) {
   }
   */
   else if(inp == 'Enter' && pos == 9){
+    pos = 1;
     if(row == 'a'){
       let result = check_eq(a1.innerHTML + a2.innerHTML + a3.innerHTML + a4.innerHTML + a5.innerHTML + a6.innerHTML + a7.innerHTML + a8.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not an equation")
+        a1.innerHTML = 'a';
+        a2.innerHTML = 'b';
+        a3.innerHTML = 'c';
+        a4.innerHTML = 'd';
+        a5.innerHTML = 'e';
+        a6.innerHTML = 'f';
+        a7.innerHTML = 'g';
+        a8.innerHTML = 'h';
+      }
+      else{
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -162,9 +175,22 @@ function letter(e) {
       }
       row = 'b';
     }
+    }
     else if(row == 'b'){
       let result = check_eq(b1.innerHTML + b2.innerHTML + b3.innerHTML + b4.innerHTML + b5.innerHTML + b6.innerHTML + b7.innerHTML + b8.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not an equation")
+        b1.innerHTML = 'a';
+        b2.innerHTML = 'b';
+        b3.innerHTML = 'c';
+        b4.innerHTML = 'd';
+        b5.innerHTML = 'e';
+        b6.innerHTML = 'f';
+        b7.innerHTML = 'g';
+        b8.innerHTML = 'h';
+      }
+      else{
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -221,9 +247,22 @@ function letter(e) {
       }
       row = 'c';
     }
+    }
     else if(row == 'c'){
       let result = check_eq(c1.innerHTML + c2.innerHTML + c3.innerHTML + c4.innerHTML + c5.innerHTML + c6.innerHTML + c7.innerHTML + c8.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not an equation")
+        c1.innerHTML = 'a';
+        c2.innerHTML = 'b';
+        c3.innerHTML = 'c';
+        c4.innerHTML = 'd';
+        c5.innerHTML = 'e';
+        c6.innerHTML = 'f';
+        c7.innerHTML = 'g';
+        c8.innerHTML = 'h';
+      }
+      else{
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -280,9 +319,22 @@ function letter(e) {
       }
       row = 'd';
     }
+    }
     else if(row == 'd'){
       let result = check_eq(d1.innerHTML + d2.innerHTML + d3.innerHTML + d4.innerHTML + d5.innerHTML + d6.innerHTML + d7.innerHTML + d8.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not an equation")
+        d1.innerHTML = 'a';
+        d2.innerHTML = 'b';
+        d3.innerHTML = 'c';
+        d4.innerHTML = 'd';
+        d5.innerHTML = 'e';
+        d6.innerHTML = 'f';
+        d7.innerHTML = 'g';
+        d8.innerHTML = 'h';
+      }
+      else{
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -339,9 +391,22 @@ function letter(e) {
       }
       row = 'e';
     }
+    }
     else if(row == 'e'){
       let result = check_eq(e1.innerHTML + e2.innerHTML + e3.innerHTML + e4.innerHTML + e5.innerHTML + e6.innerHTML + e7.innerHTML + e8.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not an equation")
+        e1.innerHTML = 'a';
+        e2.innerHTML = 'b';
+        e3.innerHTML = 'c';
+        e4.innerHTML = 'd';
+        e5.innerHTML = 'e';
+        e6.innerHTML = 'f';
+        e7.innerHTML = 'g';
+        e8.innerHTML = 'h';
+      }
+      else{
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -398,9 +463,22 @@ function letter(e) {
       }
       row = 'f';
     }
+    }
     else if(row == 'f'){
       let result = check_eq(f1.innerHTML + f2.innerHTML + f3.innerHTML + f4.innerHTML + f5.innerHTML + f6.innerHTML + f7.innerHTML + f8.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not an equation")
+        f1.innerHTML = 'a';
+        f2.innerHTML = 'b';
+        f3.innerHTML = 'c';
+        f4.innerHTML = 'd';
+        f5.innerHTML = 'e';
+        f6.innerHTML = 'f';
+        f7.innerHTML = 'g';
+        f8.innerHTML = 'h';
+      }
+      else{
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
           if(i == 0){
@@ -456,6 +534,7 @@ function letter(e) {
         }
       }
     }
+  }
     pos = 1;
   }
   else if(pos == 9){
@@ -665,7 +744,7 @@ function check_eq(gues) {
   let op_guess = '';
   let equal_pos = 0;
   for (var i = 0; i < guess.length; i++) {
-    if(guess[i] == '+'){
+    if(guess[i] == 'p'){
       op_guess = '+';
       op_pos = i;
     }
@@ -673,7 +752,7 @@ function check_eq(gues) {
       op_guess = '-';
       op_pos = i;
     }
-    else if(guess[i]=='*'){
+    else if(guess[i]=='x'){
       op_guess = '*';
       op_pos = i;
     }
@@ -685,8 +764,40 @@ function check_eq(gues) {
       equal_pos = i;
     }
   }
-
+  numb1 = '';
+  numb2 = '';
+  given = '';
+  if(equal_pos == 0 || op_pos == 0 || op_pos > equal_pos){
+    return "n";
+  }
   for (var i = 0; i < op_pos; i++) {
+    numb1+=guess[i];
+  }
+  for(var i = op_pos + 1; i < equal_pos; i++){
+    numb2+= guess[i];
+  }
+  for(var i = equal_pos + 1; i < 8; i++){
+    given+=guess[i];
+  }
+  if(op_guess == '+'){
+    if(parseInt(numb1) + parseInt(numb2) != parseInt(given)){
+      return "n";
+    }
+  }
+  else if(op_guess == '-'){
+    if(parseInt(numb1) - parseInt(numb2) != parseInt(given)){
+      return "n";
+    }
+  }
+  else if(op_guess == '*'){
+    if(parseInt(numb1) * parseInt(numb2) != parseInt(given)){
+      return "n";
+    }
+  }
+  else if(op_guess == '/'){
+    if(parseInt(numb1) / parseInt(numb2) != parseInt(given)){
+      return "n";
+    }
   }
   //this stores the doubles and triples for the generated equation
   for (var i = 0; i < equation.length-1; i++) {

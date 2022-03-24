@@ -1,5 +1,5 @@
 let FullList;
-let Guesses = 6;
+let Guesses = 8;
 let Champ;
 let NumOfChamp;
 let NumOfGuessChamp;
@@ -68,22 +68,22 @@ function checkChamp(e) {
         info += "Wrong Role";
       }
       if(p == 0){
-        g1.innerHTML = "1: " + info;
+        g1.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
       }
       else if(p==1){
-        g2.innerHTML = "2: " + info;
+        g2.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
       }
       else if(p==2){
-        g3.innerHTML = "3: " + info;
+        g3.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
       }
       else if(p==3){
-        g4.innerHTML = "4: " + info;
+        g4.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
       }
       else if(p==4){
-        g5.innerHTML = "5: " + info;
+        g5.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
       }
       else if(p==5){
-        g6.innerHTML = "6: " + info;
+        g6.innerHTML = FullList[NumOfGuessChamp][0] + ": " + info;
       }
       console.log(info);
       p+=1;

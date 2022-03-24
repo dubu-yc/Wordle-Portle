@@ -23,12 +23,18 @@ db.create_tables()
 
 @app.route('/', methods=['GET', 'POST'])
 def display_login():
+    db.create_tables()
     """Initial page, redirects user to their homepage if they are logged in, to the login page if they are not"""
     if(session.get("user_id") == None):
         return redirect("/login")
-    return render_template(
-        'home.html', user_id=session.get("user_id")
-    )
+    else:
+        user_id = session.get("user_id")
+        w = db.get_scores(user_id).get('w')
+        n = db.get_scores(user_id)["n"]
+        y = db.get_scores(user_id)["y"]
+        return render_template(
+            'home.html', user_id=user_id, w=w, n = n, y = y
+        )
 @app.route("/login", methods=["GET","POST"])
 def login():
         if(session.get("user_id")):
@@ -40,6 +46,7 @@ def login():
             error = db.error_handling(username, password)
             if(error == ""):
                 session["user_id"] = user_id #Cookie based authentication (user is identified by his client id)
+
                 return redirect("/")
             return render_template('login.html', error_message = error)
         return render_template('login.html')
@@ -52,6 +59,11 @@ def logout():
 
 @app.route("/wordle", methods=["GET","POST"])
 def open_wordle():
+    if(request.method == 'POST'):
+        print(request.form.get("js_data"))
+        if(request.form.get("js_data") == "correct"):
+            db.inc_wordle(session["user_id"])
+        return render_template("wordle.html")
     return render_template("wordle.html")
 
 @app.route("/about", methods=["GET","POST"])
@@ -64,15 +76,27 @@ def open_profile():
 
 @app.route("/nerdle", methods=["GET","POST"])
 def open_nerdle():
+    if(request.method == 'POST'):
+        print(request.form.get("js_data"))
+        if(request.form.get("js_data") == "correct"):
+            db.inc_nerdle(session["user_id"])
+        return render_template("wordle.html")
     return render_template("nerdle.html")
 
 @app.route("/yordle", methods=["GET","POST"])
 def open_yordle():
+    if(request.method == 'POST'):
+        print(request.form.get("js_data"))
+        if(request.form.get("js_data") == "correct"):
+            db.inc_yordle(session["user_id"])
+        return render_template("wordle.html")
     return render_template("yordle.html")
 
 @app.route("/home", methods=["GET","POST"])
 def open_home():
-    return render_template("home.html")
+    print("hi" + db.get_scores(session["user_id"])[0])
+    return render_template("home.html", w = db.get_scores(user_id).get('w'), n = db.get_scores(user_id)["n"], y = db.get_scores(user_id)["y"])
+
 
 @app.route('/wordget')
 def get_word():
@@ -81,7 +105,11 @@ def get_word():
     randominteger = random.randint(0,2300)
     words = content[randominteger]
     return jsonify(words)
-
+@app.route('/wordsget')
+def get_words():
+    file = open('Wordz.txt')
+    content = file.readlines()
+    return jsonify(content)
 @app.route('/champget')
 def get_champ():
     data = list(csv.reader(open("Champs.csv")))

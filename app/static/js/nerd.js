@@ -87,6 +87,7 @@ while(success == false) {
     digits = 0;
   }
 }
+console.log(equation)
 document.addEventListener('keydown',letter);
 row = 'a';
 let curr = row + pos;
@@ -96,12 +97,153 @@ function letter(e) {
   console.log(curr);
   if(inp == 'Backspace'){
     pos = pos - 1;
+    curr = row + pos;
+  if(curr == 'a1'){
+    a1.innerHTML = 'a';
   }
-  /*
-  else if(pos != 9 && (inp != '1')){ //make it so that they can only do numbers, =, p, -, x, /
+  else if(curr == 'a2'){
+    a2.innerHTML = 'b';
+  }
+  else if(curr == 'a3'){
+    a3.innerHTML = 'c';
+  }
+  else if(curr == 'a4'){
+    a4.innerHTML = 'd';
+  }
+  else if(curr == 'a5'){
+    a5.innerHTML = 'e';
+  }
+  else if(curr == 'a6'){
+    a6.innerHTML = 'f';
+  }
+  else if(curr == 'a7'){
+    a7.innerHTML = 'g';
+  }
+  else if(curr == 'a8'){
+    a8.innerHTML = 'h';
+  }
+  else if(curr == 'b1'){
+    b1.innerHTML = 'a';
+  }
+  else if(curr == 'b2'){
+    b2.innerHTML = 'b';
+  }
+  else if(curr == 'b3'){
+    b3.innerHTML = 'c';
+  }
+  else if(curr == 'b4'){
+    b4.innerHTML = 'd';
+  }
+  else if(curr == 'b5'){
+    b5.innerHTML = 'e';
+  }
+  else if(curr == 'b6'){
+    b6.innerHTML = 'f';
+  }
+  else if(curr == 'b7'){
+    b7.innerHTML = 'g';
+  }
+  else if(curr == 'b8'){
+    b8.innerHTML = 'h';
+  }
+  else if(curr == 'c1'){
+    c1.innerHTML = 'a';
+  }
+  else if(curr == 'c2'){
+    c2.innerHTML = 'b';
+  }
+  else if(curr == 'c3'){
+    c3.innerHTML = 'c';
+  }
+  else if(curr == 'c4'){
+    c4.innerHTML = 'd';
+  }
+  else if(curr == 'c5'){
+    c5.innerHTML = 'e';
+  }
+  else if(curr == 'c6'){
+    c6.innerHTML = 'f';
+  }
+  else if(curr == 'c7'){
+    c7.innerHTML = 'g';
+  }
+  else if(curr == 'c8'){
+    c8.innerHTML = 'h';
+  }
+  else if(curr == 'd1'){
+    d1.innerHTML = 'a';
+  }
+  else if(curr == 'd2'){
+    d2.innerHTML = 'b';
+  }
+  else if(curr == 'd3'){
+    d3.innerHTML = 'c';
+  }
+  else if(curr == 'd4'){
+    d4.innerHTML = 'd';
+  }
+  else if(curr == 'd5'){
+    d5.innerHTML = 'e';
+  }
+  else if(curr == 'd6'){
+    d6.innerHTML = 'f';
+  }
+  else if(curr == 'd7'){
+    d7.innerHTML = 'g';
+  }
+  else if(curr == 'd8'){
+    d8.innerHTML = 'h';
+  }
+  else if(curr == 'e1'){
+    e1.innerHTML = 'a';
+  }
+  else if(curr == 'e2'){
+    e2.innerHTML = 'b';
+  }
+  else if(curr == 'e3'){
+    e3.innerHTML = 'c';
+  }
+  else if(curr == 'e4'){
+    e4.innerHTML = 'd';
+  }
+  else if(curr == 'e5'){
+    e5.innerHTML = 'e';
+  }
+  else if(curr == 'e6'){
+    e6.innerHTML = 'f';
+  }
+  else if(curr == 'e7'){
+    e7.innerHTML = 'g';
+  }
+  else if(curr == 'e8'){
+    e8.innerHTML = 'h';
+  }
+  else if(curr == 'f1'){
+    f1.innerHTML = 'a';
+  }
+  else if(curr == 'f2'){
+    f2.innerHTML = 'b';
+  }
+  else if(curr == 'f3'){
+    f3.innerHTML = 'c';
+  }
+  else if(curr == 'f4'){
+    f4.innerHTML = 'd';
+  }
+  else if(curr == 'f5'){
+    f5.innerHTML = 'e';
+  }
+  else if(curr == 'f6'){
+    f6.innerHTML = 'f';
+  }
+  else if(curr == 'f7'){
+    f7.innerHTML = 'g';
+  }
+  else if(curr == 'f8'){
+    f8.innerHTML = 'h';
+  }
+  }
 
-  }
-  */
   else if(inp == 'Enter' && pos == 9){
     pos = 1;
     if(row == 'a'){
@@ -757,7 +899,7 @@ function check_eq(gues) {
       op_pos = i;
     }
     else if(guess[i]=='/'){
-      op_guess = '-';
+      op_guess = '/';
       op_pos = i;
     }
     if(guess[i] == '='){
@@ -795,6 +937,10 @@ function check_eq(gues) {
     }
   }
   else if(op_guess == '/'){
+    console.log(numb1)
+    console.log(numb2)
+    console.log(given)
+    console.log(parseInt(numb1) / parseInt(numb2))
     if(parseInt(numb1) / parseInt(numb2) != parseInt(given)){
       return "n";
     }
@@ -881,7 +1027,5 @@ function check_eq(gues) {
   }
   return result;
 }
-console.log(dup);
-console.log(dup_guess);
-console.log()
+
 console.log(result);

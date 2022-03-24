@@ -36,6 +36,97 @@ function letter(e) {
     if(pos > 0){
       pos = pos - 1;
     }
+  curr = row + pos;
+  if(curr == 'a1'){
+    a1.innerHTML = 1;
+  }
+  else if(curr == 'a2'){
+    a2.innerHTML = 2;
+  }
+  else if(curr == 'a3'){
+    a3.innerHTML = 3;
+  }
+  else if(curr == 'a4'){
+    a4.innerHTML = 4;
+  }
+  else if(curr == 'a5'){
+    a5.innerHTML = 5;
+  }
+  else if(curr == 'b1'){
+    b1.innerHTML = 1;
+  }
+  else if(curr == 'b2'){
+    b2.innerHTML = 2;
+  }
+  else if(curr == 'b3'){
+    b3.innerHTML = 3;
+  }
+  else if(curr == 'b4'){
+    b4.innerHTML = 4;
+  }
+  else if(curr == 'b5'){
+    b5.innerHTML = 5;
+  }
+  else if(curr == 'c1'){
+    c1.innerHTML = 1;
+  }
+  else if(curr == 'c2'){
+    c2.innerHTML = 2;
+  }
+  else if(curr == 'c3'){
+    c3.innerHTML = 3;
+  }
+  else if(curr == 'c4'){
+    c4.innerHTML = 4;
+  }
+  else if(curr == 'c5'){
+    c5.innerHTML = 5;
+  }
+  else if(curr == 'd1'){
+    d1.innerHTML = 1;
+  }
+  else if(curr == 'd2'){
+    d2.innerHTML = 2;
+  }
+  else if(curr == 'd3'){
+    d3.innerHTML = 3;
+  }
+  else if(curr == 'd4'){
+    d4.innerHTML = 4;
+  }
+  else if(curr == 'd5'){
+    d5.innerHTML = 5;
+  }
+  else if(curr == 'e1'){
+    e1.innerHTML = 1;
+  }
+  else if(curr == 'e2'){
+    e2.innerHTML = 2;
+  }
+  else if(curr == 'e3'){
+    e3.innerHTML = 3;
+  }
+  else if(curr == 'e4'){
+    e4.innerHTML = 4;
+  }
+  else if(curr == 'e5'){
+    e5.innerHTML = 5;
+  }
+  else if(curr == 'f1'){
+    f1.innerHTML = 1;
+  }
+  else if(curr == 'f2'){
+    f2.innerHTML = 2;
+  }
+  else if(curr == 'f3'){
+    f3.innerHTML = 3;
+  }
+  else if(curr == 'f4'){
+    f4.innerHTML = 4;
+  }
+  else if(curr == 'f5'){
+    f5.innerHTML = 5;
+  }
   }
   /*
   else if(pos != 9 && (inp != 'a')){ //make it so they can only do letters
@@ -46,7 +137,6 @@ function letter(e) {
     pos = 1;
     if(row == 'a'){
       let result = check_word(a1.innerHTML + a2.innerHTML + a3.innerHTML + a4.innerHTML + a5.innerHTML);
-      console.log(result);
       if(result == "n"){
         console.log("not a word")
         a1.innerHTML = '1';
@@ -58,6 +148,13 @@ function letter(e) {
       }
       else{
         num_guesses = num_guesses - 1;
+        console.log(result)
+        if(result[0] == "green" && result[1] == "green" && result[2] == "green" && result[3] == "green" && result[4] == "green"){
+          console.log(result)
+          console.log('correct');
+          $.post( "/wordle", {
+            js_data : 'correct'
+          });
         for (var i = 0; i < result.length; i++) {
           if(result[i] == 'yellow'){
             if(i == 0){
@@ -93,6 +190,7 @@ function letter(e) {
               a5.style = "background-color: green;"
             }
           }
+        }
         }
         row = 'b';
     }
@@ -486,7 +584,6 @@ function letter(e) {
     f5.innerHTML = inp;
     pos = pos + 1;
   }
-
 }
 
 /*

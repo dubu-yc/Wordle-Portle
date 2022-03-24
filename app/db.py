@@ -5,7 +5,7 @@ c = db.cursor()
 def create_tables():
     c = db.cursor()
     """Creates the tables in the database to store entries and users"""
-    command = 'CREATE TABLE IF NOT EXISTS scores (username TEXT NOT NULL UNIQUE, wordle_score INTEGER, nerdle_score INTEGER, yordle_score INTEGER)'
+    command = 'CREATE TABLE IF NOT EXISTS scores (user_id INTEGER, wordle_score INTEGER, nerdle_score INTEGER, yordle_score INTEGER)'
     c.execute(command)
     command = 'CREATE TABLE IF NOT EXISTS users (user_id INTEGER PRIMARY KEY, username TEXT NOT NULL UNIQUE, password TEXT NOT NULL)'
     c.execute(command)
@@ -27,22 +27,28 @@ def create_user(username, password):
     create_tables()
     """Adds a user with a username and password into the users table of the database"""
     c.execute(f'INSERT INTO users (username, password) VALUES (?, ?);', (username, password)) 
-    c.execute(f'INSERT INTO scores (username, wordle_score,nerdle_score,yordle_score) VALUES (?,?,?,?);', (username,0,0,0))
+    c.execute(f'INSERT INTO scores (wordle_score,nerdle_score,yordle_score) VALUES (?,?,?);', (0,0,0))
     db.commit()
-#list(c.execute(f'select user_id, wordle_score, nerde_score, yordle_score from scores where user_id == ? limit ? offset ?', (user_id, limit, offset)))
-#For getting all of a users scores. Mya get rid of limit/offset, if not go from 0-200 or so
-
-"""            try:
-                session['user_id'] = database.create_user(username, password)
-                return redirect("/")
-            except IntegrityError:
-                return render_template('register.html', error = True,
-                error_message="That username is already taken. Please pick another one.")
-
-            except Exception:
-                return render_template('register.html', error = True,
-                error_message="Sorry, something went wrong on our end. Please try registering later.")
-"""
+def get_scores(user_id):
+    c = db.cursor()
+    result = list(c.execute(f'SELECT wordle_score, nerdle_score, yordle_score from scores where user_id == ?', (user_id,)))
+    return [{
+        "w": wordle_score,
+        "n": nerdle_score,
+        "y": yordle_score,
+    } for (wordle_score, nerdle_score, yordle_score) in result][0]
+def inc_wordle(user_id):
+    c = db.cursor()
+    c.execute(f'UPDATE scores SET wordle_score = ? where user_id == ?', (get_scores(user_id)['w'] + 1, user_id))
+    db.commit()
+def inc_nerdle(user_id):
+    c = db.cursor()
+    c.execute(f'UPDATE scores SET nerdle_score = ? where user_id == ?', (get_scores(user_id)['n'] + 1, user_id))
+    db.commit()
+def inc_yordle(user_id):
+    c = db.cursor()
+    c.execute(f'UPDATE scores SET yordle_score = ? where user_id == ?', (get_scores(user_id)['y'] + 1, user_id))
+    db.commit()
 
 def error_handling(username, password):
     """

@@ -125,4 +125,4 @@ yoonahC -- 2022-03-23 20:01
 Added functionality to about page, edited rest of templates.
 
 josephineL -- 2022-03-23 21:24
-Edited home page to include flag, etc.
+Edited home page to include flag, etc; edited readme with API used and droplet site; did HTML side of logout. Revised design doc.

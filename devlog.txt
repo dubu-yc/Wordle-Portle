@@ -120,3 +120,6 @@ Yordle input works perfectly, good integration into JS, Checking Guess is WIP
 
 ericG -- 2022-03-23 16:12
 Yordle almost completely functional, currently only console.log shows stuff however
+
+yoonahC -- 2022-03-23 20:01
+Added functionality to about page, edited rest of templates.

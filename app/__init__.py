@@ -44,17 +44,11 @@ def login():
             return render_template('login.html', error_message = error)
         return render_template('login.html')
 
-"""
-    try:
-    error = db.error_handling(username, password)
-    if(error == ""):
-        session["login"] = name_input
-        print("hello")
-        return redirect(url_for('load_home'))
-except Exception as e:
-    error = e
-    return render_template('login.html', error_message = error) # render login page with an error message
-    """
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/login")
 
 @app.route("/wordle", methods=["GET","POST"])
 def open_wordle():

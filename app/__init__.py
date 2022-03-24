@@ -63,6 +63,8 @@ def open_wordle():
         print(request.form.get("js_data"))
         if(request.form.get("js_data") == "correct"):
             db.inc_wordle(session["user_id"])
+        if(request.form.get("js_data") == "incorrect"):
+            db.set_wordle(session["user_id"])
         return render_template("wordle.html")
     return render_template("wordle.html")
 
@@ -80,6 +82,8 @@ def open_nerdle():
         print(request.form.get("js_data"))
         if(request.form.get("js_data") == "correct"):
             db.inc_nerdle(session["user_id"])
+        if(request.form.get("js_data") == "incorrect"):
+            db.set_nerdle(session["user_id"])
         return render_template("wordle.html")
     return render_template("nerdle.html")
 
@@ -89,13 +93,18 @@ def open_yordle():
         print(request.form.get("js_data"))
         if(request.form.get("js_data") == "correct"):
             db.inc_yordle(session["user_id"])
+        if(request.form.get("js_data") == "incorrect"):
+            db.set_yordle(session["user_id"])
         return render_template("wordle.html")
     return render_template("yordle.html")
 
 @app.route("/home", methods=["GET","POST"])
 def open_home():
-    print("hi" + db.get_scores(session["user_id"])[0])
-    return render_template("home.html", w = db.get_scores(user_id).get('w'), n = db.get_scores(user_id)["n"], y = db.get_scores(user_id)["y"])
+    user_id = session.get("user_id")
+    w = db.get_scores(user_id).get('w')
+    n = db.get_scores(user_id)["n"]
+    y = db.get_scores(user_id)["y"]
+    return render_template("home.html", w = w, n=n, y=y)
 
 
 @app.route('/wordget')

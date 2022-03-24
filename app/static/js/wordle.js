@@ -2,6 +2,7 @@ let num_guesses = 6;
 let row = '';
 let pos = 1;
 let word;
+let words;
 let word_chars;
 let guess;
 let guess_chars = ['','','','',''];
@@ -15,13 +16,22 @@ word = data;
 let word_chars = word.split('');
 word_chars.pop();
 console.log(word_chars);
-document.addEventListener('keydown',letter);
 row = 'a';
 let curr = row + pos;
+let p_data = fetch('/wordsget')
+  .then(function(response){
+    return response.json();
+  })
+.then(data => {
+  console.log(data);
+  words = data;
+document.addEventListener('keydown',letter);
 function letter(e) {
+
   let inp = e.key
   curr = row + pos;
   console.log(inp);
+  console.log(curr);
   if(inp == 'Backspace'){
     if(pos > 0){
       pos = pos - 1;
@@ -33,51 +43,73 @@ function letter(e) {
   }
   */
   else if(inp == 'Enter' && pos == 6){
+    pos = 1;
     if(row == 'a'){
       let result = check_word(a1.innerHTML + a2.innerHTML + a3.innerHTML + a4.innerHTML + a5.innerHTML);
       console.log(result);
-      num_guesses = num_guesses - 1;
-      for (var i = 0; i < result.length; i++) {
-        if(result[i] == 'yellow'){
-          if(i == 0){
-            a1.style = "background-color: yellow;"
-          }
-          else if(i==1){
-            a2.style = "background-color: yellow;"
-          }
-          else if(i==2){
-            a3.style = "background-color: yellow;"
-          }
-          else if(i==3){
-            a4.style = "background-color: yellow;"
-          }
-          else if(i==4){
-            a5.style = "background-color: yellow;"
-          }
-        }
-        else if(result[i] == 'green'){
-          if(i == 0){
-            a1.style = "background-color: green;"
-          }
-          else if(i==1){
-            a2.style = "background-color: green;"
-          }
-          else if(i==2){
-            a3.style = "background-color: green;"
-          }
-          else if(i==3){
-            a4.style = "background-color: green;"
-          }
-          else if(i==4){
-            a5.style = "background-color: green;"
-          }
-        }
+      if(result == "n"){
+        console.log("not a word")
+        a1.innerHTML = '1';
+        a2.innerHTML = '2';
+        a3.innerHTML = '3';
+        a4.innerHTML = '4';
+        a5.innerHTML = '5';
+        pos = 1;
       }
-      row = 'b';
+      else{
+        num_guesses = num_guesses - 1;
+        for (var i = 0; i < result.length; i++) {
+          if(result[i] == 'yellow'){
+            if(i == 0){
+              a1.style = "background-color: yellow;"
+            }
+            else if(i==1){
+              a2.style = "background-color: yellow;"
+            }
+            else if(i==2){
+              a3.style = "background-color: yellow;"
+            }
+            else if(i==3){
+              a4.style = "background-color: yellow;"
+            }
+            else if(i==4){
+              a5.style = "background-color: yellow;"
+            }
+          }
+          else if(result[i] == 'green'){
+            if(i == 0){
+              a1.style = "background-color: green;"
+            }
+            else if(i==1){
+              a2.style = "background-color: green;"
+            }
+            else if(i==2){
+              a3.style = "background-color: green;"
+            }
+            else if(i==3){
+              a4.style = "background-color: green;"
+            }
+            else if(i==4){
+              a5.style = "background-color: green;"
+            }
+          }
+        }
+        row = 'b';
+    }
     }
     else if(row == 'b'){
       let result = check_word(b1.innerHTML + b2.innerHTML + b3.innerHTML + b4.innerHTML + b5.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not a word")
+        b1.innerHTML = '1';
+        b2.innerHTML = '2';
+        b3.innerHTML = '3';
+        b4.innerHTML = '4';
+        b5.innerHTML = '5';
+        pos = 1;
+      }
+      else{
       num_guesses = num_guesses - 1;
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
@@ -117,9 +149,20 @@ function letter(e) {
       }
       row = 'c';
     }
+    }
     else if(row == 'c'){
       let result = check_word(c1.innerHTML + c2.innerHTML + c3.innerHTML + c4.innerHTML + c5.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not a word")
+        c1.innerHTML = '1';
+        c2.innerHTML = '2';
+        c3.innerHTML = '3';
+        c4.innerHTML = '4';
+        c5.innerHTML = '5';
+        pos = 1;
+      }
+      else{
       num_guesses = num_guesses - 1;
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
@@ -159,9 +202,20 @@ function letter(e) {
       }
       row = 'd';
     }
+    }
     else if(row == 'd'){
       let result = check_word(d1.innerHTML + d2.innerHTML + d3.innerHTML + d4.innerHTML + d5.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not a word")
+        d1.innerHTML = '1';
+        d2.innerHTML = '2';
+        d3.innerHTML = '3';
+        d4.innerHTML = '4';
+        d5.innerHTML = '5';
+        pos = 1;
+      }
+      else{
       num_guesses = num_guesses - 1;
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
@@ -201,9 +255,20 @@ function letter(e) {
       }
       row = 'e';
     }
+    }
     else if(row == 'e'){
       let result = check_word(e1.innerHTML + e2.innerHTML + e3.innerHTML + e4.innerHTML + e5.innerHTML);
       console.log(result);
+      if(result == "n"){
+        console.log("not a word")
+        e1.innerHTML = '1';
+        e2.innerHTML = '2';
+        e3.innerHTML = '3';
+        e4.innerHTML = '4';
+        e5.innerHTML = '5';
+        pos = 1;
+      }
+      else{
       num_guesses = num_guesses - 1;
       for (var i = 0; i < result.length; i++) {
         if(result[i] == 'yellow'){
@@ -243,48 +308,60 @@ function letter(e) {
       }
       row = 'f';
     }
+    }
     else if(row == 'f'){
       let result = check_word(f1.innerHTML + f2.innerHTML + f3.innerHTML + f4.innerHTML + f5.innerHTML);
       console.log(result);
-      num_guesses = num_guesses - 1;
-      for (var i = 0; i < result.length; i++) {
-        if(result[i] == 'yellow'){
-          if(i == 0){
-            f1.style = "background-color: yellow;"
+      if(result == "n"){
+        console.log("not a word")
+        f1.innerHTML = '1';
+        f2.innerHTML = '2';
+        f3.innerHTML = '3';
+        f4.innerHTML = '4';
+        f5.innerHTML = '5';
+        pos = 1;
+      }
+      else{
+        num_guesses = num_guesses - 1;
+        for (var i = 0; i < result.length; i++) {
+          if(result[i] == 'yellow'){
+            if(i == 0){
+              f1.style = "background-color: yellow;"
+            }
+            else if(i==1){
+              f2.style = "background-color: yellow;"
+            }
+            else if(i==2){
+              f3.style = "background-color: yellow;"
+            }
+            else if(i==3){
+              f4.style = "background-color: yellow;"
+            }
+            else if(i==4){
+              f5.style = "background-color: yellow;"
+            }
           }
-          else if(i==1){
-            f2.style = "background-color: yellow;"
+          else if(result[i] == 'green'){
+            if(i == 0){
+              f1.style = "background-color: green;"
+            }
+            else if(i==1){
+              f2.style = "background-color: green;"
+            }
+            else if(i==2){
+              f3.style = "background-color: green;"
+            }
+            else if(i==3){
+              f4.style = "background-color: green;"
+            }
+            else if(i==4){
+              f5.style = "background-color: green;"
+            }
           }
-          else if(i==2){
-            f3.style = "background-color: yellow;"
-          }
-          else if(i==3){
-            f4.style = "background-color: yellow;"
-          }
-          else if(i==4){
-            f5.style = "background-color: yellow;"
-          }
-        }
-        else if(result[i] == 'green'){
-          if(i == 0){
-            f1.style = "background-color: green;"
-          }
-          else if(i==1){
-            f2.style = "background-color: green;"
-          }
-          else if(i==2){
-            f3.style = "background-color: green;"
-          }
-          else if(i==3){
-            f4.style = "background-color: green;"
-          }
-          else if(i==4){
-            f5.style = "background-color: green;"
-          }
-        }
+        } 
+        pos = 1;
       }
     }
-    pos = 1;
   }
   else if(pos == 6){
     pos = 6;
@@ -409,6 +486,7 @@ function letter(e) {
     f5.innerHTML = inp;
     pos = pos + 1;
   }
+
 }
 
 /*
@@ -420,6 +498,7 @@ If it is, num_guesses is decremented, and the function to check the word is call
 function check_word(guess) {
   guess_chars = guess.split('');
   console.log(guess_chars);
+  let real = false;
   let dup = ['',''];
   let dup_count = [0,0];
   let result = ['','','','',''];
@@ -439,6 +518,15 @@ function check_word(guess) {
         dup_count[1] = dup_count[1] + 1;
       }
     }
+  }
+  for (var i = words.length - 1; i >= 0; i--) {
+    cur = words[i].split('');
+    if(cur[0] + cur[1] + cur[2] + cur[3] + cur[4] == guess){
+      real = true;
+    }
+  }
+  if(real == false){
+    return "n";
   }
   /*this stores doubles and triples of the guess */
   dup_guess = ['',''];
@@ -486,4 +574,5 @@ function check_word(guess) {
   }
   return(result);
 }
+})
 })

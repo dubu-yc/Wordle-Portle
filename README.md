@@ -48,3 +48,6 @@ $ git clone https://github.com/dubu-yc/Wordle-Portle.git
 ### Launch Site
 
 Go to http://127.0.0.1:5000/ in your browser.
+
+##  Droplet Site
+http://137.184.197.42/

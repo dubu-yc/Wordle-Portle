@@ -49,7 +49,12 @@ def inc_yordle(user_id):
     c = db.cursor()
     c.execute(f'UPDATE scores SET yordle_score = ? where user_id == ?', (get_scores(user_id)['y'] + 1, user_id))
     db.commit()
-
+def set_wordle(user_id):
+    c.execute(f'UPDATE scores SET wordle_score = ? where user_id == ?', (0, user_id))
+def set_nerdle(user_id):
+    c.execute(f'UPDATE scores SET nerdle_score = ? where user_id == ?', (0, user_id))
+def set_yordle(user_id):
+    c.execute(f'UPDATE scores SET yordle_score = ? where user_id == ?', (0, user_id))
 def error_handling(username, password):
     """
     Returns the correct error message when the user is logging in.
